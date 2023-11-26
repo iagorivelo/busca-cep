@@ -21,16 +21,10 @@ export default function Home() {
 
     setCep(response);
 
+    console.log(cep);
+
     setInput('');
-
-      // verification(response);
   }
-
-  // function verification(response) {
-  //   if (Object.keys(response.data).length === 1) {
-  //     alert("Verifique o campo preenchido e tente novamente!");
-  //   }
-  // }
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-[#121214]">
