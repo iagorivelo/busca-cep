@@ -3,10 +3,19 @@
 import { useState } from 'react';
 import { Search } from 'lucide-react';
 
+interface CepData {
+  cep: string;
+  logradouro: string;
+  complemento: string;
+  bairro: string;
+  localidade: string;
+  uf: string;
+}
+
 export default function Home() {
 
   const [input, setInput] = useState('');
-  const [cep, setCep]     = useState({});
+  const [cep, setCep]     = useState<CepData | null>(null);
 
   async function search() {
     if(input === '') {
@@ -21,7 +30,7 @@ export default function Home() {
 
     setCep(response);
 
-    console.log(cep);
+    console.log(response);
 
     setInput('');
   }
@@ -43,7 +52,7 @@ export default function Home() {
         </button>
       </div>
 
-      {Object.keys(cep).length > 1 && (
+      {cep && (
         <div className='flex justify-center items-start flex-col text-white bg-violet-700 w-96 px-7 rounded'>
           <h2 className='my-4 font-bold text-3xl'>CEP: { cep.cep }</h2>
           <span className='mb-4 font-bold'>{ cep.logradouro }</span>
