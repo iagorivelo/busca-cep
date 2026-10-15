@@ -1,9 +1,3 @@
-# Busca CEP
-
-Consulta de endereços via CEP integrada à ViaCEP com validação, feedback de erro e histórico local.
-
-**Demo:** [busca-por-cep.vercel.app](https://busca-por-cep.vercel.app/) · **No portfólio:** [iagorivelo.vercel.app/projects/busca-cep](https://iagorivelo.vercel.app/projects/busca-cep)
-
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
